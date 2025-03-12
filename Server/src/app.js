@@ -1,5 +1,5 @@
 const express = require("express");
-const ProductManager = require("./ProductManager");  // Certifique-se de que o caminho está correto
+const ProductManager = require("./ProductManager");  
 
 const app = express();
 const productManager = new ProductManager("data/products.json")
