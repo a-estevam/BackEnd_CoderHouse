@@ -4,8 +4,8 @@ const path = require("path");
 class ProductManager {
     #code = 0;
 
-    constructor(path) {
-        this.path = path;
+    constructor(filePath) {
+        this.path = path.join(__dirname, filePath);
         this.#criarArquivo();
     }
 
