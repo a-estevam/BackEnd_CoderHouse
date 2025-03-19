@@ -3,6 +3,8 @@ const path = require("path");
 
 class ProductManager {
     #code = 0;
+    #pid = 1;
+    #status = true
 
     constructor(filePath) {
         this.path = path.join(__dirname, filePath);
@@ -33,7 +35,7 @@ class ProductManager {
         return await this.#lerArquivo();
     };
 
-    addProduct = async (title, description, price, thumbnail, stock) => {
+    addProduct = async (pid, title, description, price, thumbnail, stock, status, category) => {
         const products = await this.#lerArquivo();
         const productExists = products.some((product) => product.title === title);
         if (productExists) {
@@ -42,12 +44,15 @@ class ProductManager {
         }
 
         const product = {
+            pid: this.#pid = this.#pid + 1 ,
             title,
             description,
             price,
             thumbnail,
-            code: (this.#code = this.#code + 1),
+            code,
             stock,
+            status,
+            category,
         };
 
         products.push(product);
@@ -104,37 +109,6 @@ class ProductManager {
         console.log("Produto deletado com sucesso!");
     };
 }
-
-// const main = async () => {
-//     const products = new ProductManager("./data/products.json");
-
-//     await products.addProduct(
-//         "prata 925 - 1",
-//         "teste de descrição 1",
-//         55,
-//         "https://p-pratas.vercel.app/assets/Ppratas_brand-BRDF9yQj.svg",
-//         40
-//     );
-
-//     const productList = await products.getProducts();
-//     console.log("Lista de produtos:", productList);
-
-//     await products.updateProduct(1, {
-//         title: "prata 925 - atualizado",
-//         price: 60,
-//         stock: 50,
-//     });
-
-//     const updatedProductList = await products.getProducts();
-//     console.log("Lista de produtos atualizada:", updatedProductList);
-
-//     await products.deleteProduct(1);
-
-//     const finalProductList = await products.getProducts();
-//     console.log("Lista de produtos após exclusão:", finalProductList);
-// };
-
-// main()
 
 
 

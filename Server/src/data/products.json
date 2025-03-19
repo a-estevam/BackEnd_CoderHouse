@@ -1,1 +1,27 @@
-[]
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "teste",
+      "description": "Camiseta básica de algodão, confortável e durável.",
+      "price": "1",
+      "thumbnail": "https://example.com/camiseta.jpg",
+      "stock": 100,
+      "category": "Roupas",
+      "status": "disponível",
+      "code": "CAM001"
+    },
+    {
+      "id": 2,
+      "title": "teste2",
+      "description": "Camiseta básica de algodão, confortável e durável.",
+      "price": "1",
+      "thumbnail": "https://example.com/camiseta.jpg",
+      "stock": 100,
+      "category": "Roupas",
+      "status": "disponível",
+      "code": "CAM003"
+    }
+  ],
+  "nextId": 3
+}
