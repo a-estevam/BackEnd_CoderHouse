@@ -1,0 +1,24 @@
+<div class="menu">
+        <h2>Lista de produtos</h2>
+    <br>
+    <button onclick="window.location.href = '/realTimeProducts'">Cadastrar</button>
+</div>
+
+<div>
+
+    <ul id="productList">
+        {{#each products}}
+        <li class="product-item">
+            <h3>{{this.title}}</h3>
+            <img src="{{this.thumbnail}}" alt="{{this.title}}" width="100" />
+            <p><strong>Descrição:</strong> {{this.description}}</p>
+            <p><strong>Preço:</strong> R$ {{this.price}}</p>
+            <p><strong>Estoque:</strong> {{this.stock}}</p>
+            <p><strong>Categoria:</strong> {{this.category}}</p>
+            <p><strong>Status:</strong> {{this.status}}</p>
+            <p><strong>Código:</strong> {{this.code}}</p>
+            
+        </li>
+        {{/each}}
+    </ul>
+</div>

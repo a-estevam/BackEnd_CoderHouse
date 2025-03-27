@@ -1,0 +1,46 @@
+<div class="menu">
+  <h2>Cadastrar novo produto</h2>
+
+<button onclick="window.location.href = '/'"> Lista de produto</button>
+</div>
+
+
+
+<div class="container" style="display: flex; gap: 40px;">
+  <form id="productForm">
+    <input type="text" name="title" placeholder="Título" required />
+    <textarea name="description" placeholder="Descrição" required></textarea>
+    <input type="number" step="0.01" name="price" placeholder="Preço" required />
+    <input type="url" name="thumbnail" placeholder="URL da imagem" required />
+    <input type="number" name="stock" placeholder="Estoque" required />
+    <input type="text" name="category" placeholder="Categoria" required />
+    <select name="status" required>
+      <option value="">Selecione status</option>
+      <option value="disponível">Disponível</option>
+      <option value="indisponível">Indisponível</option>
+    </select>
+    <input type="text" name="code" placeholder="Código do item" required />
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <div>
+    <h2>Produtos cadastrados</h2>
+    <ul id="productList">
+      {{#each products}}
+        <li data-id="{{id}}">
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+          <img src="{{thumbnail}}" alt="{{title}}" style="max-width: 150px;" />
+          <p><strong>Preço:</strong> R$ {{price}}</p>
+          <p><strong>Estoque:</strong> {{stock}}</p>
+          <p><strong>Categoria:</strong> {{category}}</p>
+          <p><strong>Status:</strong> {{status}}</p>
+          <button onclick="deleteProduct('{{id}}')">Remover</button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
