@@ -21,7 +21,29 @@
       "category": "Roupas",
       "status": "disponível",
       "code": "CAM003"
+    },
+    {
+      "id": 3,
+      "title": "teste",
+      "description": "teste",
+      "price": "0.05",
+      "thumbnail": "https://s2-home-globo.glbimg.com/PXnoacDDPRHTph2SAXPK7NfwTRw=/228x439:2399x1660/fit-in/515x290/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/c/5/iQYwclTxKwiXv9t48QCg/whatsapp-image-2025-03-22-at-18.17.41.jpeg",
+      "stock": "1",
+      "category": "teste",
+      "status": "disponível",
+      "code": "teste"
+    },
+    {
+      "id": 4,
+      "title": "dfgdfgf",
+      "description": "dfgdfg",
+      "price": "0.01",
+      "thumbnail": "https://s2-home-globo.glbimg.com/PXnoacDDPRHTph2SAXPK7NfwTRw=/228x439:2399x1660/fit-in/515x290/middle/smart/filters:strip_icc():strip_exif()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/c/5/iQYwclTxKwiXv9t48QCg/whatsapp-image-2025-03-22-at-18.17.41.jpeg",
+      "stock": "1",
+      "category": "fgdfg",
+      "status": "indisponível",
+      "code": "teste"
     }
   ],
-  "nextId": 3
+  "nextId": 5
 }

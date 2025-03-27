@@ -1,4 +1,1 @@
-Server/node_modules/
-Aulas/websockets/node_modules/
-Aulas/templateEngine/node_modules/
-
+node_modules

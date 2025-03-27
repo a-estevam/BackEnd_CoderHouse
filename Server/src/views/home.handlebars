@@ -1,0 +1,15 @@
+<div>
+    <h2>Produtos cadastrados</h2>
+    {{#each produtos}}
+      <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <h3>{{this.title}}</h3>
+        <img src="{{this.thumbnail}}" alt="{{this.title}}" width="100" />
+        <p><strong>Descrição:</strong> {{this.description}}</p>
+        <p><strong>Preço:</strong> R$ {{this.price}}</p>
+        <p><strong>Estoque:</strong> {{this.stock}}</p>
+        <p><strong>Categoria:</strong> {{this.category}}</p>
+        <p><strong>Status:</strong> {{this.status}}</p>
+        <p><strong>Código:</strong> {{this.code}}</p>
+      </div>
+    {{/each}}
+</div>
